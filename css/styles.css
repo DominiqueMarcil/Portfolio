@@ -1,0 +1,60 @@
+body {
+    display: relative;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+.hero {
+    display: flex;
+}
+
+.large-rectangle {
+    height: 540px;
+    width: 841px;
+    background-color: #000000;
+    margin-left: 60px;
+    position: flex;
+}
+
+.rectangle-text-header {
+    position: relative;
+    top: 5%;
+    margin-left: 40%;
+    transform: translate(-50%, -50%);
+    color:#f0f0f0
+    /* add your preferred styles for the text */
+}
+
+.small-rectangles {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rectangle-text-small {
+    position: relative;
+    padding-left: 17%;
+    margin-top: 40px;
+    margin-right: 50%;
+    transform: translate(50%, 50%);
+    color:#f0f0f0
+}
+
+.small-rectangle {
+    width: 520px;
+    height: 120px;
+    background-color: rgb(71, 71, 71);
+}
+
+.filler {
+    width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    .small-rectangles {
+        flex-direction: row;
+    }
+}
