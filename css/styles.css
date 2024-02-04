@@ -81,6 +81,40 @@ body {
     width: 150px;
 }
 
+.bottom-rectangle {
+    width: 90.7%;
+    height: 150px;
+    margin-top: 40px;
+    margin-left: 60px;
+    background-color: #000000;
+    position: flex;
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.10),
+        rgba(255, 255, 255, 0.5)
+    );
+    backdrop-filter: blur(1rem);
+    z-index: 1;
+    border-radius: 5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2)
+}
+
+.bottom-rectangle-text {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%; 
+    padding-top: 8%;
+    margin-left: 37%;
+    transform: translate(-50%, -50%);
+    color:#f0f0f0a1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
+    font-weight: 500; 
+}
+
 .mesh-gradient {
     position: absolute;
     top: 0;
