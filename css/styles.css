@@ -35,9 +35,11 @@ body {
     top: 5%;
     margin-left: 40%;
     transform: translate(-50%, -50%);
-    color:#f0f0f0;
+    color:#f0f0f0a1;
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
+    font-weight: 500; 
 }
 
 .small-rectangles {
