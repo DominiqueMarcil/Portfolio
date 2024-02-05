@@ -8,6 +8,7 @@ body {
 
 .hero {
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 
@@ -58,37 +59,10 @@ body {
     width: 100%;
 }
 
-#textContainer2, #textContainer3, #textContainer4{
+#textContainer2, #textContainer3, #textContainer4 {
     position: relative;
-    justify-content: right;
-    margin-top: 1%;
-    padding-left: 110%;
-    position: relative;
-    transform: translate(-50%, -50%);
-    color:#f0f0f0a1;
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
-    font-weight: 500;
-    width: 100%;
-}
-
-
-
-.small-rectangles {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-left: 50px;
-    
-}
-
-.rectangle-text-small {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 11%;
+    justify-content: left;
+    margin-top: 5%;
     padding-left: 102%;
     position: relative;
     transform: translate(-50%, -50%);
@@ -100,16 +74,22 @@ body {
     width: 100%;
 }
 
-.rectangle-text-small:hover {
-    color: #e9e6e6;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.34);
+
+.threeContainer {
+    height: 540px;
+    width: 841px;;
 }
-
-
+.small-rectangles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 .small-rectangle {
     width: 720px;
     height: 150px;
+    justify-content: center;
+    margin-top: 20px;
     background-color: rgb(71, 71, 71);  
     background-color: #000000;
     position: flex;
@@ -126,15 +106,37 @@ body {
     
 }
 
-.filler {
-  
+.rectangle-text-small {
+    margin-top: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color:#f0f0f0a1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
+    font-weight: 500;
+    width: 100%;
+}
+
+.button:hover {
+    color: #e9e6e6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.34);
+}
+
+.base {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: row;
+    margin-top: 30px;
 }
 
 .bottom-rectangle {
-    width: 90.7%;
+    width: 93%;
     height: 150px;
-    margin-top: 40px;
-    margin-left: 60px;
     background-color: #000000;
     position: flex;
     background: white;
@@ -151,18 +153,15 @@ body {
 
 .bottom-rectangle-text {
     display: flex;
-    justify-content: left;
+    margin-left: 2%;
+    /* justify-content: left; */
     align-items: center;
     height: 100%; 
-    padding-top: 8%;
-    margin-left: 37%;
-    transform: translate(-50%, -50%);
     color:#f0f0f0a1;
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
     font-weight: 500; 
-    width: auto;
 }
 
 .bottom-rectangle-text:hover {
@@ -187,7 +186,6 @@ p {
   .letter {
     display: inline-block;
     position: relative;
-    float: left;
     transform: translateZ(25px);
     transform-origin: 50% 50% 25px;
   }
