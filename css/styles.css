@@ -40,7 +40,25 @@ body {
     font-size: 3rem;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
     font-weight: 500; 
+    
 }
+
+.text {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%; 
+    padding-top: 8%;
+    margin-left: 41.5%;
+    transform: translate(-50%, -50%);
+    color:#f0f0f0a1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
+    font-weight: 500; 
+}
+
+
 
 .small-rectangles {
     width: 30%;
@@ -115,6 +133,41 @@ body {
     font-weight: 500; 
 }
 
+
+p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+  }
+  
+  .word {
+    position: absolute;
+    width: 220px;
+    opacity: 0;
+  }
+  
+  .letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+  }
+  
+  .letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  
+  .letter.behind {
+    transform: rotateX(-90deg);
+  }
+  
+  .letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
 .mesh-gradient {
     position: absolute;
     top: 0;
@@ -134,6 +187,7 @@ body {
     background: inherit; /* Inherit background from parent */
     filter: blur(50px); /* Apply blur effect to the pseudo-element */
 }
+
 
 
 @media screen and (max-width: 768px) {
