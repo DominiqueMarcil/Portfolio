@@ -54,55 +54,108 @@ animateGradient();
 
 
 // Existing text arrays and current indexes
+// const textArrays = [
+//   ["GRAPHIC DESIGN - ", "UX/UI - ", "DESIGN - ", "CREATE - "], // For text1
+//   ["UX/UI - ", "SEO - ", "OPTIMIZATION - ", "WEB DEVELOPMENT - "], // For text2
+//   ["WEB DEV", "ILLUSTRATION", "UX/UI", "D.E.I",], // For text3 
+// ];
+// let currentIndexes = [0, 0, 0];
+
+// // New text arrays and current indexes
+// const newTextArrays = [
+//   ["FRONT END - ", "LEARN - ", "BRANDING - ", "CREATE - "], // For text4
+//   ["DESIGN - ", "GRAPHICS - ", "OTG - ", "WEB DEV - "], // For text5
+//   ["WEB", "DEVELOPMENT", "LOGOS", "INTERFACE"], // For text6 
+// ];
+// let newCurrentIndexes = [newTextArrays[0].length - 1, newTextArrays[1].length - 1, newTextArrays[2].length - 1];
+
+// // New text arrays for containers 3 and 4
+// const newTextArrays3 = ["CODING - ", "CURATE - ", "RENDERING- ", "UX/UI - "]; // For container 3
+// const newTextArrays4 = ["AI - ", "DESIGN - ", "COLLAB - ", "WEB DEV - "]; // For container 4
+
+// // Current indexes for containers 3 and 4
+// let currentIndex3 = 0;
+// let currentIndex4 = 0;
+
+// // Existing switchText function
+// function switchText(containerIndex) {
+//   return function() {
+//     // Get the current index for this text segment
+//     let currentIndex = currentIndexes[containerIndex];
+
+//     // Update the text content of the span element with the corresponding id
+//     document.getElementById(`text${containerIndex + 1}`).textContent = textArrays[containerIndex][currentIndex];
+
+//     // Update the current index, wrapping back to 0 if we've reached the end of the array
+//     currentIndexes[containerIndex] = (currentIndex + 1) % textArrays[containerIndex].length;
+//   };
+// }
+
+// // New function to switch text in the opposite direction
+// function switchNewText(containerIndex) {
+//   return function() {
+//     // Get the current index for this text segment
+//     let currentIndex = newCurrentIndexes[containerIndex];
+
+//     // Update the text content of the span element with the corresponding id
+//     document.getElementById(`text${containerIndex + 4}`).textContent = newTextArrays[containerIndex][currentIndex];
+
+//     // Update the current index, wrapping back to the last index if we've reached the start of the array
+//     newCurrentIndexes[containerIndex] = (currentIndex - 1 + newTextArrays[containerIndex].length) % newTextArrays[containerIndex].length;
+//   };
+// }
+
+// // Existing setInterval calls
+// for (let i = 0; i < textArrays.length; i++) {
+//   setInterval(switchText(i), 2000);
+// }
+
+// // New setInterval calls
+// for (let i = 0; i < newTextArrays.length; i++) {
+//   setInterval(switchNewText(i), 3000);
+// }
+
+// // New function to switch text for containers 3 and 4
+// function switchText3And4(containerIndex) {
+//   return function() {
+//       let currentIndex = currentIndexes[containerIndex];
+//       document.getElementById(`text${containerIndex + 7}`).textContent = textArrays[containerIndex][currentIndex];
+//       currentIndexes[containerIndex] = (currentIndex + 1) % textArrays[containerIndex].length;
+//   };
+// }
+
+// // New setInterval calls for containers 3 and 4
+// for (let i = 2; i < textArrays.length; i++) {
+//   setInterval(switchText3And4(i), 2000);
+// }
+
 const textArrays = [
   ["GRAPHIC DESIGN - ", "UX/UI - ", "DESIGN - ", "CREATE - "], // For text1
   ["UX/UI - ", "SEO - ", "OPTIMIZATION - ", "WEB DEVELOPMENT - "], // For text2
   ["WEB DEV", "ILLUSTRATION", "UX/UI", "D.E.I",], // For text3 
-];
-let currentIndexes = [0, 0, 0];
-
-// New text arrays and current indexes
-const newTextArrays = [
   ["FRONT END - ", "LEARN - ", "BRANDING - ", "CREATE - "], // For text4
   ["DESIGN - ", "GRAPHICS - ", "OTG - ", "WEB DEV - "], // For text5
   ["WEB", "DEVELOPMENT", "LOGOS", "INTERFACE"], // For text6 
+  ["CODING - ", "CURATE - ", "RENDERING- ", "UX/UI - "], // For text7
+  ["AI - ", "DESIGN - ", "COLLAB - ", "WEB DEV - "], // For text8
+  ["MOBILE", "DEVELOPMENT", "LOGOS", "INTERFACE"], // For text9
+  ["CODING - ", "CURATE - ", "RENDERING- ", "UX/UI - "], // For text10
+  ["AI - ", "DESIGN - ", "COLLAB - ", "WEB DEV - "], // For text11
+  ["MOBILE", "DEVELOPMENT", "LOGOS", "INTERFACE"], // For text12
 ];
-let newCurrentIndexes = [newTextArrays[0].length - 1, newTextArrays[1].length - 1, newTextArrays[2].length - 1];
 
-// Existing switchText function
-function switchText(containerIndex) {
+let currentIndexes = new Array(textArrays.length).fill(0);
+
+function switchText(containerIndex, direction = 1) {
   return function() {
-    // Get the current index for this text segment
     let currentIndex = currentIndexes[containerIndex];
-
-    // Update the text content of the span element with the corresponding id
     document.getElementById(`text${containerIndex + 1}`).textContent = textArrays[containerIndex][currentIndex];
-
-    // Update the current index, wrapping back to 0 if we've reached the end of the array
-    currentIndexes[containerIndex] = (currentIndex + 1) % textArrays[containerIndex].length;
+    currentIndexes[containerIndex] = (currentIndex + direction + textArrays[containerIndex].length) % textArrays[containerIndex].length;
   };
 }
 
-// New function to switch text in the opposite direction
-function switchNewText(containerIndex) {
-  return function() {
-    // Get the current index for this text segment
-    let currentIndex = newCurrentIndexes[containerIndex];
-
-    // Update the text content of the span element with the corresponding id
-    document.getElementById(`text${containerIndex + 4}`).textContent = newTextArrays[containerIndex][currentIndex];
-
-    // Update the current index, wrapping back to the last index if we've reached the start of the array
-    newCurrentIndexes[containerIndex] = (currentIndex - 1 + newTextArrays[containerIndex].length) % newTextArrays[containerIndex].length;
-  };
-}
-
-// Existing setInterval calls
 for (let i = 0; i < textArrays.length; i++) {
-  setInterval(switchText(i), 2000);
-}
-
-// New setInterval calls
-for (let i = 0; i < newTextArrays.length; i++) {
-  setInterval(switchNewText(i), 3000);
+  let interval = (i < 3 || (i > 5 && i < 9)) ? 2000 : 3000;
+  let direction = (i < 3 || (i > 5 && i < 9)) ? 1 : -1;
+  setInterval(switchText(i, direction), interval);
 }

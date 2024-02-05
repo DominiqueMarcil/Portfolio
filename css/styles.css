@@ -58,7 +58,7 @@ body {
     width: 100%;
 }
 
-#textContainer2{
+#textContainer2, #textContainer3, #textContainer4{
     position: relative;
     justify-content: right;
     margin-top: 1%;
@@ -162,6 +162,7 @@ body {
     font-size: 3rem;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
     font-weight: 500; 
+    width: auto;
 }
 
 .bottom-rectangle-text:hover {
