@@ -1,7 +1,6 @@
 body {
-    display: relative;
-    flex-direction: row;
     height: 100vh;
+    width: 100vw;
     background-color: #f0f0f0;
     font-family: 'Roboto', sans-serif;
 }
@@ -9,6 +8,7 @@ body {
 
 .hero {
     display: flex;
+    width: 100%;
 }
 
 .large-rectangle {
@@ -32,48 +32,39 @@ body {
 
 .rectangle-text-header {
     position: relative;
-    top: 5%;
-    margin-left: 40%;
+    top: 7%;
+    margin-left: 35%;
     transform: translate(-50%, -50%);
     color:#f0f0f0a1;
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
-    font-weight: 500; 
-    
+    font-weight: 500;
 }
-
-.text {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 100%; 
-    padding-top: 8%;
-    margin-left: 41.5%;
-    transform: translate(-50%, -50%);
-    color:#f0f0f0a1;
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
-    font-weight: 500; 
-}
-
-
 
 .small-rectangles {
-    width: 30%;
+    width: 40%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 50px;
     
 }
 
 .rectangle-text-small {
-    padding-left: 17%;
-    margin-top: 40px;
-    margin-right: 50%;
-    transform: translate(50%, 50%);
-    color:#f0f0f0
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 11%;
+    padding-left: 102%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    color:#f0f0f0a1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.09);
+    font-weight: 500;
+    width: 100%;
 }
 
 .small-rectangle {
@@ -96,7 +87,7 @@ body {
 }
 
 .filler {
-    width: 150px;
+  
 }
 
 .bottom-rectangle {
