@@ -23,83 +23,10 @@ function animateGradient() { //Responsible for animating the gradient
 
 animateGradient();
 
-// const textArrays = [
-//   ["GRAPHIC DESIGN - ", "UX/UI - ", "DESIGN - ", "CREATE - "], // For text1
-//   ["UX/UI - ", "SEO - ", "OPTIMIZATION - ", "WEB DEVELOPMENT - "], // For text2
-//   ["WEB DEV", "ILLUSTRATION", "UX/UI", "D.E.I",], // For text3 
-//   ["FRONT END - ", "LEARN - ", "BRANDING - ", "BUILD - "], // For text4
-//   ["DESIGN - ", "GRAPHICS - ", "OTG - ", "WEB DEV - "], // For text5
-//   ["WEB", "DEVELOPMENT", "LOGOS", "INTERFACE"], // For text6 
-//   ["CODING - ", "CURATE - ", "RENDERING- ", "UX/UI - "], // For text7
-//   ["AI - ", "DESIGN - ", "COLLAB - ", "WEB DEV - "], // For text8
-//   ["MOBILE", "DEVELOPMENT", "LOGOS", "INTERFACE"], // For text9
-//   ["CODING - ", "CURATE - ", "RENDERING- ", "UX/UI - "], // For text10
-//   ["AI - ", "DESIGN - ", "COLLAB - ", "WEB DEV - "], // For text11
-//   ["MOBILE", "DEVELOPMENT", "LOGOS", "INTERFACE"], // For text12
-// ];
 
-// // Function to shuffle array elements
-// function shuffleArray(array) {
-//   for (let i = array.length - 1; i > 0; i--) {
-//     const j = Math.floor(Math.random() * (i + 1));
-//     [array[i], array[j]] = [array[j], array[i]];
-//   }
-//   return array;
-// }
-
-// // Shuffle each array in textArrays
-// textArrays.forEach(array => shuffleArray(array));
-
-// let currentIndexes = new Array(textArrays.length).fill(0);
-
-// for (let i = 0; i < textArrays.length; i++) {
-//   let interval = (i < 3 || (i > 5 && i < 9)) ? 3000 : 4000;
-//   let direction = (i < 3 || (i > 5 && i < 9)) ? 1 : -1;
-  
-//   setInterval((function(index, dir) {
-//     return function() {
-//       let currentIndex = currentIndexes[index];
-//       const containerId = `text${index + 1}`;
-//       const container = document.getElementById(containerId);
-      
-//       // Fade out
-//       fadeOut(container, function() {
-//         container.textContent = textArrays[index][currentIndex];
-//         // Fade in
-//         fadeIn(container);
-//         currentIndexes[index] = (currentIndex + dir + textArrays[index].length) % textArrays[index].length;
-//       });
-//     };
-//   })(i, direction), interval);
-// }
-
-// function fadeOut(element, callback) {
-//   let opacity = 1;
-//   const fade = () => {
-//     opacity -= 0.05;
-//     element.style.opacity = opacity;
-//     if (opacity <= 0) {
-//       element.style.opacity = 0;
-//       callback();
-//     } else {
-//       requestAnimationFrame(fade);
-//     }
-//   };
-//   fade();
-// }
-
-// function fadeIn(element) {
-//   let opacity = 0;
-//   const fade = () => {
-//     opacity += 0.05;
-//     element.style.opacity = opacity;
-//     if (opacity >= 1) {
-//       element.style.opacity = 1;
-//     } else {
-//       requestAnimationFrame(fade);
-//     }
-//   };
-//   fade();
-// }
-
+var contact = document.querySelector(".contact");
+contact.addEventListener("click", function() {
+    this.innerHTML = "";
+    console.log("clicked")
+});
 
